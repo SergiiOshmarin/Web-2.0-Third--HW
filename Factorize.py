@@ -1,6 +1,6 @@
 import time
 
-def factorize(numbers):
+def factorize(*numbers):
     '''Define a helper function to get the factors of a number'''
     
     def get_factors(n):
@@ -19,8 +19,12 @@ def factorize(numbers):
     elapsed_time = end_time - start_time  
     '''Print the elapsed time'''
     print(f"Execution time: {elapsed_time:.2f} seconds")
-    '''Print the list of lists of factors'''  
-    return print(factors_list)  
+    '''Print the list of lists of factors''' 
+    return factors_list  
 
 '''Test the function with a list of numbers'''
-factorize([12345, 67890, 54321, 98765, 77665, 32445898])
+a, b, c, d  = factorize(128, 255, 99999, 10651060)
+print(f"assert a == {a}")
+print(f"assert b == {b}")
+print(f"assert c == {c}")
+print(f"assert d == {d}")

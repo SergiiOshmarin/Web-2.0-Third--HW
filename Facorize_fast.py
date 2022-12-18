@@ -20,7 +20,7 @@ def get_factors(n):
     return factors
 
 '''Define the function to find the factors of a list of numbers'''
-def factorize(numbers):
+def factorize(*numbers):
     '''Define a function to log the result'''
     def log_result(result):
         logger.debug(f"{multiprocessing.current_process().name}: {result}")
@@ -43,5 +43,5 @@ def factorize(numbers):
 
 if __name__ == '__main__':
     '''Find the factors of the given list of numbers'''
-    factors = factorize([12345, 67890, 54321, 98765,77665,32445898])
-    print(factors)
+    '''Test the function with a list of numbers'''
+    a, b, c, d  = factorize(128, 255, 99999, 10651060)
